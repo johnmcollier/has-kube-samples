@@ -1,0 +1,11 @@
+apiVersion: has.appstudio/v1alpha1
+kind: HASApplicationRequest
+metadata:
+  name: petclinic-app-update-request-23455
+spec:
+  type: update
+  applicationUUID: a7e3010f-9a53-49ed-bff2-0b53d0f4ba4d
+  applicationName: petclinic-app-new
+  description: new description for petclinic-app-new
+status:
+  response: successful

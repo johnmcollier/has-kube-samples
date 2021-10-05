@@ -1,0 +1,17 @@
+apiVersion: has.appstudio/v1alpha1
+kind: HASApplication
+metadata:
+  name: a7e3010f-9a53-49ed-bff2-0b53d0f4ba4d
+  annotations:
+    application: petclinic-app
+status:
+  response: create successful
+  data: |
+    schemaVersion: 2.1.0
+    metadata:
+    name: petclinic-app
+    attributes:
+      has.description: "application definition for petclinic-app"
+      has.identifier: "com.redhat.has"
+      has.version: "has/v1"
+      repo: 'https://github.com/johnmcollier/petclinic-app2'

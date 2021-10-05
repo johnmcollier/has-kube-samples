@@ -1,10 +1,10 @@
 apiVersion: has.appstudio/v1alpha1
 kind: HASServiceRequest
 metadata:
-  name: backend-service-create-request
+  name: backend-service-update-request
 spec:
-  type: create
+  type: update
   serviceName: backend
   applicationUUID: a7e3010f-9a53-49ed-bff2-0b53d0f4ba4d
   sourceRepository:
-    url: https://github.com/devfile-samples/devfile-sample-code-with-quarkus
+    url: https://github.com/devfile-samples/devfile-stack-go

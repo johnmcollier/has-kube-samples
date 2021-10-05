@@ -1,6 +1,6 @@
-# Create Application
+# Query Samples
 
-This scenario covers query a list of devfile samples from a Devfile Registry
+This scenario covers querying a list of devfile samples from a Devfile Registry
 
 1. A [DevfileSampleRequest](input-hasDevfileSampleRequest.yaml) resource is created by a client with the following fields set:
 

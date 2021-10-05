@@ -1,0 +1,10 @@
+apiVersion: has.appstudio/v1alpha1
+kind: DevfileSamplesQuery
+metadata:
+ name: registry-query-test
+spec:
+ registries: 
+ - registry.devfile.io
+ filter:
+   tags: ["java", "nodejs"]
+   archs: ["amd64"]

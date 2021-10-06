@@ -1,5 +1,5 @@
 apiVersion: has.appstudio/v1alpha1
-kind: HASServiceDetectionRequest
+kind: HASServiceDetectionQuery
 metadata:
   name: detect-services-32452
 spec:

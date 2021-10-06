@@ -1,0 +1,10 @@
+apiVersion: has.appstudio/v1alpha1
+kind: HASService
+metadata:
+ name: backend-service-request-29445
+spec:
+ serviceName: backend
+ application: a7e3010f-9a53-49ed-bff2-0b53d0f4ba4d
+ sourceRepository:
+   url: https://github.com/devfile-samples/devfile-sample-python-basic
+ description: A simple backend service

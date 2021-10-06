@@ -1,8 +1,0 @@
-apiVersion: has.appstudio/v1alpha1
-kind: HASApplicationRequest
-metadata:
-  name: petclinic-app-request-23454
-spec:
-  type: create
-  gitRepository: https://github.com/johnmcollier/petclinic-app
-  description: application definition for petclinic-app

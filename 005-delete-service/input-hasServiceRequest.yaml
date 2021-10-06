@@ -1,8 +1,0 @@
-apiVersion: has.appstudio/v1alpha1
-kind: HASServiceRequest
-metadata:
-  name: backend-service-delete-request
-spec:
-  type: delete
-  serviceName: backend
-  applicationUUID: a7e3010f-9a53-49ed-bff2-0b53d0f4ba4d

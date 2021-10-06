@@ -1,0 +1,27 @@
+apiVersion: has.appstudio/v1alpha1
+kind: HASServiceDetectionRequest
+metadata:
+  name: detect-services-32452
+spec:
+  gitRepository: https://github.com/test/repository.git
+status:
+  response: successful/unsuccessful
+  description: repository does not exist
+  data: |
+   {
+     "service1": {
+         "language": "java",
+         "projectType": "maven",
+         "devfileFound": true
+     },
+     "service2": {
+         "language": "nodejs",
+         "projectType": "nodejs",
+         "devfileFound": false
+     },
+     "service3": {
+         "language": "",
+         "projectType": "",
+         "devfileFound": false
+     }
+   }

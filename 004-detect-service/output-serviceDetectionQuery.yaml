@@ -4,24 +4,20 @@ metadata:
   name: detect-services-32452
 spec:
   gitRepository: https://github.com/test/repository.git
-status:
-  response: successful/unsuccessful
-  description: repository does not exist
+  conditions:
+  - lastTransitionTime: "2022-01-22T16:29:29Z"
+    status: "True"
+    type: Created
+  - lastTransitionTime: "2022-01-22T16:29:31Z"
+    status: "True"
+    type: Successful
   data: |
    {
      "service1": {
-         "language": "java",
-         "projectType": "maven",
-         "devfileFound": true
+         "devfileFound": true,
+         "devfile": "<some-devfile>"
      },
      "service2": {
-         "language": "nodejs",
-         "projectType": "nodejs",
-         "devfileFound": false
-     },
-     "service3": {
-         "language": "",
-         "projectType": "",
          "devfileFound": false
      }
    }

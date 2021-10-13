@@ -9,33 +9,39 @@ spec:
    tags: ["java", "nodejs"]
    archs: ["amd64"]
 status:
- response: successful/unsuccessful
- description: cannot reach registry
- data: |
-   - name: maven-basic
-     displayName: Basic Node.js
-     description: A simple Hello World Java Maven application
-     type: sample
-     tags:
-       - Java
-       - Maven
-     icon: 'maven.svg’
-     projectType: maven
-     language: java
-     git:
-       remotes:
-         origin: 'https://github.com/maven-starters/maven-sample.git'
-   - name: code-with-quarkus
-     displayName: Basic Quarkus
-     description: A simple Hello World Java application using Quarkus
-     type: sample
-     tags:
-       - Java
-       - Maven
-       - Quarkus
-     icon: 'https://design.jboss.org/quarkus/logo/final/SVG/quarkus_icon_rgb_default.svg'
-     projectType: quarkus
-     language: java
-     git:
-       remotes:
-         origin: 'https://github.com/devfile-samples/devfile-sample-code-with-quarkus.git'
+  conditions:
+  - lastTransitionTime: "2022-01-22T16:29:29Z"
+    status: "True"
+    type: Created
+  - lastTransitionTime: "2022-01-22T16:29:31Z"
+    status: "True"
+    type: Successful
+  data:
+    - name: maven-basic
+      displayName: Basic Node.js
+      description: A simple Hello World Java Maven application
+      type: sample
+      tags:
+        - Java
+        - Maven
+      icon: 'maven.svg'
+      projectType: maven
+      language: java
+      git:
+        remotes:
+          origin: 'https://github.com/maven-starters/maven-sample.git'
+
+    - name: code-with-quarkus
+      displayName: Basic Quarkus
+      description: A simple Hello World Java application using Quarkus
+      type: sample
+      tags:
+        - Java
+        - Maven
+        - Quarkus
+      icon: 'https://design.jboss.org/quarkus/logo/final/SVG/quarkus_icon_rgb_default.svg'
+      projectType: quarkus
+      language: java
+      git:
+        remotes:
+          origin: 'https://github.com/devfile-samples/devfile-sample-code-with-quarkus.git'

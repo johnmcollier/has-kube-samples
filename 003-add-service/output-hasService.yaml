@@ -1,68 +1,71 @@
 apiVersion: has.appstudio/v1alpha1
 kind: HASService
 metadata:
- name: bc84b31b-7465-4ab9-aa72-a84b116c2a89
- annotations:
-   application: a7e3010f-9a53-49ed-bff2-0b53d0f4ba4d
+ name: petclinic-app-backend-20944
+ labels:
+   application: petclinic-app-32453-asd345
    serviceName: backend
 spec:
  serviceName: backend
- application: a7e3010f-9a53-49ed-bff2-0b53d0f4ba4d
- sourceRepository:
-   url: https://github.com/devfile-samples/devfile-sample-python-basic
+ application: petclinic-app-32453-asd345
+ source:
+   gitURL: https://github.com/devfile-samples/devfile-sample-python-basic
  description: A simple backend service
 status:
- response: created
- data: |
-   schemaVersion: 2.0.0
-   metadata:
-     name: python
-     version: 1.0.0
-     attributes:
-       alpha.build-context: .
-       alpha.build-dockerfile: docker/Dockerfile
-   starterProjects:
-     - name: python-example
-       git:
-         remotes:
-           origin: https://github.com/odo-devfiles/python-ex
-   components:
-     - name: buildguidance
-       attributes:
-         tool: console-import
-       container:
-         image: buildguidanceimage-placeholder
-         memoryLimit: 1024Mi
-         endpoints:
-           - name: http-8081
-             targetPort: 8081
-     - name: py-web
-       container:
-         image: quay.io/eclipse/che-python-3.7:nightly
-         mountSources: true
-         endpoints:
-           - name: web
-             targetPort: 8080
-   commands:
-     - id: pip-install-requirements
-       exec:
-         commandLine: pip install --user -r requirements.txt
-         group:
-           kind: build
-           isDefault: true
-         component: py-web
-     - id: run-app
-       exec:
-         commandLine: "python app.py"
-         workingDir: ${PROJECTS_ROOT}
-         component: py-web
-         group:
-           kind: run
-           isDefault: true
-     - id: debugpy
-       exec:
-         commandLine: "pip install --user debugpy && python -m debugpy --listen 0.0.0.0:${DEBUG_PORT} app.py"
-         workingDir: ${PROJECTS_ROOT}
-         component: py-web
-         group:
-           kind: debug
+  conditions:
+  - lastTransitionTime: "2022-01-22T17:29:31Z"
+    status: "True"
+    type: Created
+  devfile:
+    schemaVersion: 2.0.0
+    metadata:
+      name: python
+      version: 1.0.0
+      attributes:
+        alpha.build-context: .
+        alpha.build-dockerfile: docker/Dockerfile
+    starterProjects:
+      - name: python-example
+        git:
+          remotes:
+            origin: https://github.com/odo-devfiles/python-ex
+    components:
+      - name: buildguidance
+        attributes:
+          tool: console-import
+        container:
+          image: buildguidanceimage-placeholder
+          memoryLimit: 1024Mi
+          endpoints:
+            - name: http-8081
+              targetPort: 8081
+      - name: py-web
+        container:
+          image: quay.io/eclipse/che-python-3.7:nightly
+          mountSources: true
+          endpoints:
+            - name: web
+              targetPort: 8080
+    commands:
+      - id: pip-install-requirements
+        exec:
+          commandLine: pip install --user -r requirements.txt
+          group:
+            kind: build
+            isDefault: true
+          component: py-web
+      - id: run-app
+        exec:
+          commandLine: "python app.py"
+          workingDir: ${PROJECTS_ROOT}
+          component: py-web
+          group:
+            kind: run
+            isDefault: true
+      - id: debugpy
+        exec:
+          commandLine: "pip install --user debugpy && python -m debugpy --listen 0.0.0.0:${DEBUG_PORT} app.py"
+          workingDir: ${PROJECTS_ROOT}
+          component: py-web
+          group:
+            kind: debug

@@ -1,10 +1,8 @@
 apiVersion: has.appstudio/v1alpha1
 kind: HASApplication
 metadata:
- name: 3b93e64a-c354-465e-8bf1-323c31ca0ec4
- annotations:
-   application: petclinic-app
+ name: petclinic-app-32453-asd345
 spec:
-  applicationName: petclinic-app
+  displayName: "Petclinic App"
   gitRepo: https://github.com/johnmcollier/petclinic-app
   description: “application definition for petclinic-app”

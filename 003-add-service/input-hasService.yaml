@@ -1,10 +1,9 @@
 apiVersion: has.appstudio/v1alpha1
 kind: HASService
 metadata:
-  name: bc84b31b-7465-4ab9-aa72-a84b116c2a89
+  name: petclinic-app-backend-45345
 spec:
   serviceName: backend
-  application: a7e3010f-9a53-49ed-bff2-0b53d0f4ba4d
+  application: petclinic-app-32453-asd345
   sourceRepository:
     url: https://github.com/devfile-samples/devfile-sample-python-basic
-  description: A simple backend service

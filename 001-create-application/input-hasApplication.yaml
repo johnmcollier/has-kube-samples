@@ -4,6 +4,6 @@ metadata:
  name: petclinic-app-32453-asd345
 spec:
   displayName: "Petclinic App"
-  sourceRepository: https://github.com/johnmcollier/petclinic-app
+  appModelRepository: https://github.com/johnmcollier/petclinic-app
   gitOpsRepository: https://github.com/johnmcollier/petclinic-gitops
   description: “application definition for petclinic-app”

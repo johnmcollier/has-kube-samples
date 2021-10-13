@@ -3,28 +3,30 @@ kind: HASApplication
 metadata:
  name: petclinic-app-32453-asd345
 spec:
-  displayName: petclinic-app
-  gitRepo: https://github.com/johnmcollier/petclinic-app
+  displayName: "Petclinic App"
+  sourceRepository: https://github.com/johnmcollier/petclinic-app
+  gitOpsRepository: https://github.com/johnmcollier/petclinic-gitops
   description: “application definition for petclinic-app”
 status:
- conditions:
- - lastTransitionTime: "2022-01-22T16:29:31Z"
-   status: "True"
-   type: Created
- - lastTransitionTime: "2022-01-22T16:31:31Z"
-   status: "True"
-   type: Updated
- data: |
-   schemaVersion: 2.1.0
-   metadata:
-   name: petclinic-app
-   attributes:
-     has.description: "application definition for petclinic-app"
-     has.identifier: "com.redhat.has"
-     has.version: "has/v1"
-     repo: 'https://github.com/johnmcollier/petclinic-app'
-   projects:
-   - name: backend
-     git:
-       remotes:
-         origin: https://github.com/devfile-samples/devfile-sample-python-basic
+  conditions:
+  - lastTransitionTime: "2022-01-22T16:29:31Z"
+    status: "True"
+    type: Created
+  - lastTransitionTime: "2022-01-22T16:31:31Z"
+    status: "True"
+    type: Updated
+  devfile:
+    schemaVersion: 2.1.0
+    metadata:
+    name: petclinic-app
+    attributes:
+      has.description: "application definition for petclinic-app"
+      has.identifier: "com.redhat.has"
+      has.version: "has/v1"
+      sourceRepo: 'https://github.com/johnmcollier/petclinic-app'
+      gitOpsRepo: 'https://github.com/johnmcollier/petclinic-gitops'
+    projects:
+    - name: backend
+      git:
+        remotes:
+          origin: https://github.com/devfile-samples/devfile-sample-python-basic

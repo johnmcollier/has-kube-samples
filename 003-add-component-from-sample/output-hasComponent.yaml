@@ -1,16 +1,12 @@
 apiVersion: has.appstudio/v1alpha1
-kind: HASService
+kind: HASComponent
 metadata:
- name: petclinic-app-backend-20944
- labels:
-   application: petclinic-app-32453-asd345
-   serviceName: backend
+  name: petclinic-app-backend-45345
 spec:
- serviceName: backend
- application: petclinic-app-32453-asd345
- source:
-   gitURL: https://github.com/devfile-samples/devfile-sample-python-basic
- description: A simple backend service
+  componentName: backend
+  application: petclinic-app-32453-asd345
+  source:
+    gitURL: https://github.com/devfile-samples/devfile-sample-python-basic
 status:
   conditions:
   - lastTransitionTime: "2022-01-22T17:29:31Z"

@@ -1,0 +1,9 @@
+apiVersion: has.appstudio/v1alpha1
+kind: HASComponent
+metadata:
+  name: petclinic-app-backend-45345
+spec:
+  componentName: backend
+  application: petclinic-app-32453-asd345
+  source:
+    gitURL: https://github.com/devfile-samples/devfile-sample-python-basic

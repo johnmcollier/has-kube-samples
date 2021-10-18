@@ -7,3 +7,13 @@ spec:
   application: petclinic-app-32453-asd345
   source:
     gitURL: https://github.com/devfile-samples/devfile-sample-python-basic
+  resource:
+    limits:
+      CPU: 1M
+      Memory: 1Gi
+  replicas: 3
+  route: myapplication.someurl.com
+  port: 8080
+  env:
+    - key: SOME_ENV
+      value: test-value

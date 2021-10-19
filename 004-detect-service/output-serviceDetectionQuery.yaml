@@ -15,7 +15,7 @@ spec:
    {
      "service1": {
          "devfileFound": true,
-         "devfile": "<some-devfile>"
+         "devfileURL": "https://registry.devfile.io/devfiles/go"
      },
      "service2": {
          "devfileFound": false

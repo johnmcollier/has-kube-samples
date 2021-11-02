@@ -4,8 +4,14 @@ metadata:
  name: petclinic-app-32453-asd345
 spec:
   displayName: "Petclinic App"
-  appModelRepository: https://github.com/johnmcollier/petclinic-app
-  gitOpsRepository: https://github.com/johnmcollier/petclinic-gitops
+  appModelRepository: 
+    url: https://github.com/johnmcollier/petclinic-app
+    version: 
+    context: 
+  gitOpsRepository: 
+    url: https://github.com/johnmcollier/petclinic-gitops
+    version:
+    context:
   description: “application definition for petclinic-app”
 status:
   conditions:
@@ -15,10 +21,12 @@ status:
   devfile:
     schemaVersion: 2.1.0
     metadata:
-    name: petclinic-app
-    attributes:
-      has.description: "application definition for petclinic-app"
-      has.identifier: "com.redhat.has"
-      has.version: "has/v1"
-      sourceRepo: 'https://github.com/johnmcollier/petclinic-app'
-      gitOpsRepo: 'https://github.com/johnmcollier/petclinic-gitops'
+      name: petclinic-app
+      attributes:
+        appModelRepository.url: 'https://github.com/johnmcollier/petclinic-app'
+        appModelRepository.version: master
+        appModelRepository.context: /
+        gitOpsRepository.url: 'https://github.com/johnmcollier/petclinic-gitops'
+        gitOpsRepository.version: master
+        gitOpsRepository.context: /
+

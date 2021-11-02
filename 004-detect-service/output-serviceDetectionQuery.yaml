@@ -13,11 +13,15 @@ spec:
     type: Successful
   data: |
    {
-     "service1": {
-         "devfileFound": true,
-         "devfileURL": "https://registry.devfile.io/devfiles/go"
+     "backend-service": {
+         "devfileFound": false,
+         "language": "go",
+         "projectType": "go",
+         "matchingDevfile": "https://registry.devfile.io/devfiles/go"
      },
-     "service2": {
-         "devfileFound": false
+     "frontend-service": {
+         "devfileFound": true
+         "language": "js",
+         "projectType": "nodejs",
      }
    }
